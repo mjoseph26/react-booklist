@@ -1,36 +1,31 @@
 import { useState } from 'react'
-import './App.css'
+import './App.css';
+import EventExample from './EventExample';
+import Book from './book';
+import bookArray from './books';
+
+
+
+
 
 function App() {
+  
+  const getBook = bookArray.find(id => {
+    id === bookArray.id;
+  });
+  console.log(getBook);
+
 
   return (
     <section className = 'booklist'>
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      <EventExample />
+      {bookArray.map((book) => {
+        const {img, title, author, id} = book;
+        //console.log(img, title, author)
+        return <Book key={id} img={img} title={title} author={author} getBook={getBook} />;
+        }
+      )};
     </section>
   );
 }
-
-function Book() {
-  return (
-    <article className="book">
-      <Image />
-      <Title />
-      <Author />
-    </article>
-  );
-}
-
-const Image = () => (
-  <img 
-    src="https://m.media-amazon.com/images/I/51-nXsSRfZL._SX328_BO1,204,203,200_.jpg" 
-    alt="Atomic Habits by James Clear"
-    />
-);
-const Title = () => <h2>Book Title</h2>;
-const Author = () => <h4>Book Author</h4>;
-
 export default App;

@@ -14,15 +14,20 @@ function App() {
     console.log(book);
   };
   return (
-    <section className = 'booklist'>
-      <EventExample />
-      {bookArray.map((book) => {
-        const {img, title, author, id} = book;
-        //console.log(img, title, author)
-        return <Book key={id} id={id} img={img} title={title} author={author} getBook={getBook} />;
-        }
-      )};
-    </section>
+    <>
+      <header className="hero">
+        <h1>Amazon Best Sellers</h1>
+        <p>Our most popular products based on sales. Updated frequently.</p>
+      </header>
+      <h2>Best Sellers in Books</h2>
+      <section className = 'booklist'>
+        {bookArray.map((book) => {
+          const {img, title, author, id} = book;
+          return <Book key={id} id={id} img={img} title={title} author={author} getBook={getBook} />;
+          }
+        )}
+      </section>
+    </>
   );
   
 }

@@ -18,9 +18,8 @@ body
 {
     width: 90vw;
     max-width: 1170px;
-    margin: 5rem auto;
+    margin: 2rem auto;
     display: grid;
-    gap: 2rem;
 }
 
 .book img 
@@ -29,22 +28,60 @@ body
   object-fit: cover;
 }
 
+.section{
+  padding: 24px;
+  position:relative;
+  border: 1px solid grey;
+}
+
+.tag{
+  background-color: rgb(216, 62, 6);
+  color:white;
+  position: absolute;
+  top:0;
+  left:0;
+  padding:5px;
+}
+
 .book {
   background-color: #fff;
-  border-radius: 10px;
   padding: 5rem;
   text-align: center;
+  border: 0.5px solid black;
+}
+
+.btn {
+  margin-top: 15px;
+}
+h2 {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 0px;
 }
 
 .book h2 {
   margin-top: 1rem;
   font-size: 1rem;
+  color:rgb(20, 122, 238);
 }
 
 .book h4{
   color: "#617d98";
   margin-top: "0.5rem";
   font-size: "0.85rem";
+  color:rgb(47, 139, 245);
+  font-weight: 500;
+}
+
+.hero {
+  color:white;
+  text-align: center;
+  padding: 2rem 1rem;
+  background: radial-gradient(white 1%,rgb(40, 138, 168) 98%);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  border-bottom: 3px solid black;
+  
 }
 
 @media screen and (min-width:768px){
